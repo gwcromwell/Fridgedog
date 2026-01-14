@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      The robots meta tag below tells search engines not to index or follow links on
+      this page. Including this directive helps ensure that private tracking
+      information stays out of search results【501142354621997†L15-L35】.
+    -->
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Dog Care Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Dog Care Tracker</h1>
+      <div class="section">
+        <h2>Water</h2>
+        <p>
+          Last water given at:
+          <span id="lastWaterDisplay" class="timestamp">No record yet</span>
+        </p>
+        <button id="waterButton" class="action-button">
+          Record Water Given Now
+        </button>
+        <!-- Collapsible water history using the details/summary elements
+             so the list can easily be hidden or shown. -->
+        <details id="waterHistorySection" class="history">
+          <summary>Water history</summary>
+          <ul id="waterHistoryList" class="history-list">
+            <!-- History items will be injected here -->
+          </ul>
+        </details>
+      </div>
+      <div class="section">
+        <h2>Incidents</h2>
+        <p>
+          Days since last accident or vomit:
+          <span id="daysDisplay" class="days">No incident</span>
+        </p>
+        <p>
+          Best record (days without incident):
+          <span id="highScoreDisplay" class="days">0</span>
+        </p>
+        <button id="incidentButton" class="action-button">
+          Record New Incident Now
+        </button>
+      </div>
+
+      <div class="section">
+        <!-- Export button to download history and incident data as CSV -->
+        <button id="exportButton" class="action-button export-button">
+          Export Records
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
