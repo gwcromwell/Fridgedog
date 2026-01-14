@@ -2,17 +2,17 @@
 
 This simple web application helps you track two critical aspects of your dog's daily care:
 
-1. **Water given:** A big, easily‑tapable button allows you to record the moment you provide water to your dog. The app stores the timestamp in the browser's local storage and shows the last recorded time on subsequent visits. Because data is stored with no expiration, it persists across sessions【802708823034692†L1250-L1272】. A history view lists all recorded water events in reverse chronological order.
-2. **Days since last accident/vomit:** When an accident occurs, tap the incident button to record the current timestamp. The app calculates the number of whole days that have passed since the last incident by subtracting the stored date from the current date and dividing by the number of milliseconds in a day【306253394922157†L38-L45】.
-3. **Best record:** The app keeps track of the longest streak of days without an accident (the “high score”). When the current streak surpasses the stored record, it updates automatically and persists in local storage.
+1. **Water given:** A big, easily‑tapable button allows you to record the moment you provide water to your dog. The app stores the timestamp in the browser's local storage and shows the last recorded time on subsequent visits. Because data is stored with no expiration, it persists across sessions. A history view lists all recorded water events in reverse chronological order.
+2. **Days since last inchident:** When an accident occurs, tap the inchident button to record the current timestamp. The app calculates the number of whole days that have passed since the last incident by subtracting the stored date from the current date and dividing by the number of milliseconds in a day.
+5. **Best record:** The app keeps track of the longest streak of days without an accident (the “high score”). When the current streak surpasses the stored record, it updates automatically and persists in local storage.
 
 ## Features
-
-- **Persistent storage:** Leveraging the `localStorage` API, the application stores timestamps locally on the device. Data remains available even if you close the page or restart the browser【802708823034692†L1250-L1272】.
-- **History and high score:** All water events are saved to an array in local storage using `JSON.stringify()` and `JSON.parse()`【636184699436812†L1046-L1055】. The incident tracker maintains a high score of the longest streak without an accident, updating and persisting it automatically.
+ 
+- **Persistent storage:** Leveraging the `localStorage` API, the application stores timestamps locally on the device. Data remains available even if you close the page or restart the browser.
+- **History and high score:** All water events are saved to an array in local storage using `JSON.stringify()` and `JSON.parse(). The incident tracker maintains a high score of the longest streak without an accident, updating and persisting it automatically.
 - **Collapsible water history:** The water history section uses the native `<details>`/`<summary>` elements. Click on the “Water history” summary to expand or collapse the list, letting you hide it when not needed.
-- **Export to CSV/Excel:** An **Export Records** button generates a CSV file containing the entire water history, the most recent incident, and the current high‑score. The export leverages the `Blob` API and programmatic anchor click to trigger a file download【613516986560888†L168-L184】.
-- **No indexing:** A `<meta name="robots" content="noindex, nofollow">` tag ensures that search engines do not index or follow links on the page【501142354621997†L20-L35】.
+- **Export to CSV/Excel:** An **Export Records** button generates a CSV file containing the entire water history, the most recent incident, and the current high‑score. The export leverages the `Blob` API and programmatic anchor click to trigger a file download.
+- **No indexing:** A `<meta name="robots" content="noindex, nofollow">` tag ensures that search engines do not index or follow links on the page.
 - **Responsive design:** The layout and button sizes are optimized for tablet devices like an iPad mini. The interface is minimal, focusing on usability while avoiding clutter.
 - **Automatic updates:** The days counter refreshes every minute so the displayed count stays accurate without needing to reload the page.
 
